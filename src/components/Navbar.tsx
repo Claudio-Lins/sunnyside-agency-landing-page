@@ -35,7 +35,7 @@ export function Navbar() {
             </a>
             <a
               href="#"
-              className="rounded-full bg-yellow-400 px-16 py-4 text-xl font-semibold text-gray-900"
+              className="rounded-full bg-yellow px-16 py-4 text-xl font-semibold text-gray-900"
             >
               Contact
             </a>
