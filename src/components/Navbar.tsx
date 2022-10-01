@@ -27,7 +27,7 @@ export function Navbar() {
             <a href="#" className="text-xl font-semibold text-gray-500">
               About
             </a>
-            <a href="#" className="text-xl font-semibold text-gray-500">
+            <a href="#photograpy" className="text-xl font-semibold text-gray-500">
               Services
             </a>
             <a href="#" className="text-xl font-semibold text-gray-500">

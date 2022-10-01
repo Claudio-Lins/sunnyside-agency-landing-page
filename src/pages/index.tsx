@@ -7,6 +7,9 @@ import TransformDesk from "/public/images/desktop/image-transform.jpg";
 import StandMob from "/public/images/mobile/image-stand-out.jpg";
 import StandDesk from "/public/images/desktop/image-stand-out.jpg";
 import Image from "next/image";
+import { Testimonial } from "../components/Testimonial";
+import { testimonials } from "../../data/testimonials";
+import Gallery from "../components/Gallery";
 
 const Home: NextPage = () => {
   return (
@@ -73,7 +76,10 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="-mt-2 flex flex-col md:flex-row">
-        <div className="flex h-[600px] w-full flex-col items-center justify-end gap-10 bg-image-graphic-design-mob bg-cover bg-center bg-no-repeat p-10 md:w-1/2 md:items-start md:bg-image-graphic-design-desk md:px-28">
+        <div
+          id="graphic-design"
+          className="flex h-[600px] w-full flex-col items-center justify-end gap-10 bg-image-graphic-design-mob bg-cover bg-center bg-no-repeat p-10 md:w-1/2 md:items-start md:bg-image-graphic-design-desk md:px-28"
+        >
           <h3 className="w-full text-center font-Fraunces text-3xl font-black text-veryDarkDesaturatedBlue md:text-4xl">
             Graphic design
           </h3>
@@ -83,7 +89,10 @@ const Home: NextPage = () => {
             attention.
           </p>
         </div>
-        <div className="flex h-[600px] w-full flex-col items-center justify-end gap-10 bg-image-photography-mob bg-cover bg-center bg-no-repeat p-10 md:w-1/2 md:items-start md:bg-image-photography-desk md:px-28">
+        <div
+          id="photograpy"
+          className="flex h-[600px] w-full flex-col items-center justify-end gap-10 bg-image-photography-mob bg-cover bg-center bg-no-repeat p-10 md:w-1/2 md:items-start md:bg-image-photography-desk md:px-28"
+        >
           <h3 className="w-full text-center font-Fraunces text-3xl font-black text-veryDarkDesaturatedBlue md:text-4xl">
             Photography
           </h3>
@@ -93,6 +102,17 @@ const Home: NextPage = () => {
           </p>
         </div>
       </section>
+      <section className="flex w-full flex-col items-center justify-center gap-14 py-14 md:h-[770px]">
+        <h3 className="text-center font-Fraunces text-2xl uppercase text-darkGrayishBlue">
+          Client Testimonilas
+        </h3>
+        <div className=" flex w-full flex-col items-center justify-center gap-10 md:flex-row md:items-center ">
+          {testimonials.map((testimonial: any, i) => (
+            <Testimonial key={testimonial.id} {...testimonial} />
+          ))}
+        </div>
+      </section>
+      <Gallery />
     </main>
   );
 };
