@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Testimonial } from "../components/Testimonial";
 import { testimonials } from "../../data/testimonials";
 import Gallery from "../components/Gallery";
+import { Footer } from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -113,6 +114,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <Gallery />
+      <Footer />
     </main>
   );
 };
