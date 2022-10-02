@@ -30,7 +30,8 @@ export function Translate() {
     <div className="fixed top-20 right-4 z-10 md:top-40 md:right-10">
       <button className=" group flex items-center justify-center">
         <div className=" flex max-w-0 rounded-md items-center justify-center overflow-hidden shadow -mt-2 gap-2 transition-all duration-500 group-hover:max-w-sm group-hover:bg-white group-hover:px-2">
-          {router.locales?.map((locale, index) => (
+          {router.locales?.filter((locale) => locale !== router.locale)
+          .map((locale, index) => (
             <Link href={'/'} locale={locale} key={index}>
               <a className="text-black font-bold">
                 {/* <Image src={changeLanguage()} alt={locale} width={30} height={30} /> */}

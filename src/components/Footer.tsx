@@ -16,14 +16,14 @@ export function Footer() {
             alt="Logo"
           />
         </div>
-        <div className="flex w-full justify-evenly gap-2 text-darkDesaturatedCyan">
-          <a href="#" className="text-xl font-semibold ">
+        <div className="flex w-full justify-evenly text-darkDesaturatedCyan">
+          <a href="#" className="text-lg w-1/3 text-center font-semibold ">
             {t("menu.about")}
           </a>
-          <a href="#photograpy" className="text-xl font-semibold ">
+          <a href="#photograpy" className="text-lg w-1/3 text-center leading-5 font-semibold ">
             {t("menu.services")}
           </a>
-          <a href="#" className="text-xl font-semibold ">
+          <a href="#" className="text-lg text-center w-1/3 font-semibold ">
             {t("menu.projects")}
           </a>
         </div>
