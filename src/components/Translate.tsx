@@ -27,7 +27,7 @@ export function Translate() {
   }
   
   return (
-    <div className="fixed top-20 right-4 z-10 md:top-40 md:right-10">
+    <div className="fixed top-20 right-4 z-10 md:top-28 md:right-10">
       <button className=" group flex items-center justify-center">
         <div className=" flex max-w-0 rounded-md items-center justify-center overflow-hidden shadow -mt-2 gap-2 transition-all duration-500 group-hover:max-w-sm group-hover:bg-white group-hover:px-2">
           {router.locales?.filter((locale) => locale !== router.locale)
