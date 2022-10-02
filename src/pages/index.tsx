@@ -1,18 +1,23 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import { Activity, ArrowDown } from "phosphor-react";
-import Arrow from "/public/images/mobile/arrow.svg";
-import TransformMob from "/public/images/mobile/image-transform.jpg";
-import TransformDesk from "/public/images/desktop/image-transform.jpg";
-import StandMob from "/public/images/mobile/image-stand-out.jpg";
-import StandDesk from "/public/images/desktop/image-stand-out.jpg";
 import Image from "next/image";
-import { Testimonial } from "../components/Testimonial";
 import { testimonials } from "../../data/testimonials";
-import Gallery from "../components/Gallery";
 import { Footer } from "../components/Footer";
+import Gallery from "../components/Gallery";
+import { Testimonial } from "../components/Testimonial";
+import StandDesk from "/public/images/desktop/image-stand-out.jpg";
+import TransformDesk from "/public/images/desktop/image-transform.jpg";
+import Arrow from "/public/images/mobile/arrow.svg";
+import StandMob from "/public/images/mobile/image-stand-out.jpg";
+import TransformMob from "/public/images/mobile/image-transform.jpg";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import clientTestimonials from '../../data/testimonials.json'
 
 const Home: NextPage = () => {
+  const { locale, locales, asPath } = useRouter();
+  const {t} = useTranslation("common");
   return (
     <main className="min-h-screen w-full">
       <Head>
@@ -25,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex h-screen w-full flex-col items-center bg-image-header-mob bg-cover bg-top bg-no-repeat pt-64 md:bg-image-header-desk md:bg-center md:pt-32">
         <h1 className="mb-18 text-center font-Fraunces text-6xl font-bold tracking-widest text-white md:text-8xl">
-          We are creatives
+          {t("title")}
         </h1>
         <div className="mt-20">
           <Image src={Arrow} alt="Arrow" />
@@ -43,15 +48,13 @@ const Home: NextPage = () => {
         </div>
         <div className="flex flex-col items-center justify-center gap-10 p-10 md:w-1/2 md:items-start md:px-40">
           <h3 className="text-center font-Fraunces text-3xl font-black md:text-left md:text-4xl">
-            Transform your brand
+            {t("transform.title")}
           </h3>
           <p className="text-center font-Barlow md:text-left">
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
+           {t("transform.description")}
           </p>
           <p className="text-DarkDesaturatedCyan border-b-[6px] border-yellow border-opacity-50 font-Fraunces text-lg font-[900] uppercase leading-3 tracking-wider">
-            Learn more
+            {t("transform.learnMore")}
           </p>
         </div>
       </section>
@@ -64,15 +67,13 @@ const Home: NextPage = () => {
         </div>
         <div className="flex flex-col items-center justify-center gap-10 p-10 md:w-1/2 md:items-start md:px-40">
           <h3 className="text-center font-Fraunces text-3xl font-black md:text-left md:text-4xl">
-            Stand out to the right audience
+            {t("stand.title")}
           </h3>
           <p className="text-center font-Barlow md:text-left">
-            Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we’ll build and
-            extend your brand in digital places.
+            {t("stand.description")}
           </p>
           <p className="text-DarkDesaturatedCyan border-b-[6px] border-softRed border-opacity-50 font-Fraunces text-lg font-[900] uppercase leading-3 tracking-wider">
-            Learn more
+            {t("stand.learnMore")}
           </p>
         </div>
       </section>
@@ -82,12 +83,10 @@ const Home: NextPage = () => {
           className="flex h-[600px] w-full flex-col items-center justify-end gap-10 bg-image-graphic-design-mob bg-cover bg-center bg-no-repeat p-10 md:w-1/2 md:items-start md:bg-image-graphic-design-desk md:px-28"
         >
           <h3 className="w-full text-center font-Fraunces text-3xl font-black text-veryDarkDesaturatedBlue md:text-4xl">
-            Graphic design
+            {t("graphicDesign.title")}
           </h3>
           <p className="w-full text-center font-Barlow">
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
+            {t("graphicDesign.description")}
           </p>
         </div>
         <div
@@ -95,22 +94,31 @@ const Home: NextPage = () => {
           className="flex h-[600px] w-full flex-col items-center justify-end gap-10 bg-image-photography-mob bg-cover bg-center bg-no-repeat p-10 md:w-1/2 md:items-start md:bg-image-photography-desk md:px-28"
         >
           <h3 className="w-full text-center font-Fraunces text-3xl font-black text-veryDarkDesaturatedBlue md:text-4xl">
-            Photography
+            {t("photography.title")}
           </h3>
           <p className="w-full text-center font-Barlow">
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
+            {t("photography.description")}
           </p>
         </div>
       </section>
       <section className="flex w-full flex-col items-center justify-center gap-14 py-14 md:h-[770px]">
         <h3 className="text-center font-Fraunces text-2xl uppercase text-darkGrayishBlue">
-          Client Testimonilas
+          {t("testimonials.title")}
         </h3>
         <div className=" flex w-full flex-col items-center justify-center gap-10 md:flex-row md:items-center ">
-          {testimonials.map((testimonial: any, i) => (
-            <Testimonial key={testimonial.id} {...testimonial} />
-          ))}
+          {clientTestimonials.testimonials
+            .filter(p => p.locale === locale)
+            .map((testimonial, index) => (
+              <Testimonial key={index} {...testimonial}              />
+            ))}
+          {/* {testimonials.map((testimonial: any, i) => (
+            <Testimonial key={testimonial.id} 
+            imageUrl={testimonial.imageUrl}
+            name={testimonial.name}
+            description={testimonial.description}
+            role={testimonial.role}
+            />
+          ))} */}
         </div>
       </section>
       <Gallery />
@@ -118,5 +126,13 @@ const Home: NextPage = () => {
     </main>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({locale})  =>{
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, ["common"])),
+    }
+  }
+}
 
 export default Home;

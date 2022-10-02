@@ -1,8 +1,10 @@
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import React from "react";
 import LogoColor from "/public/images/logoColor.svg";
 
 export function Footer() {
+  const {t} = useTranslation("common");
   return (
     <div className=" bg-[#90d4c5] w-full flex justify-center">
       <div className="flex h-[355px] w-full flex-col items-center justify-evenly  md:max-w-sm ">
@@ -16,13 +18,13 @@ export function Footer() {
         </div>
         <div className="flex w-full justify-evenly gap-2 text-darkDesaturatedCyan">
           <a href="#" className="text-xl font-semibold ">
-            About
+            {t("menu.about")}
           </a>
           <a href="#photograpy" className="text-xl font-semibold ">
-            Services
+            {t("menu.services")}
           </a>
           <a href="#" className="text-xl font-semibold ">
-            Projects
+            {t("menu.projects")}
           </a>
         </div>
         <div className="flex w-full justify-center gap-7 text-darkDesaturatedCyan">

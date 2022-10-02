@@ -1,0 +1,30 @@
+{
+  "title": "Nous sommes des créatifs",
+  "menu": {
+    "about": "À propos de",
+    "services": "Prestations de service",
+    "contact": "Contact",
+    "projects": "Projets"
+  },
+  "transform": {
+    "title": "Transformez votre marque",
+    "description": "Nous sommes une agence créative à service complet spécialisée dans l'aide aux marques pour qu'elles se développent rapidement. Engagez vos clients grâce à des visuels attrayants qui font la majeure partie du marketing pour vous.",
+    "learnMore": "Apprendre encore plus"
+  },
+  "stand": {
+    "title": "Démarquez-vous auprès du bon public",
+    "description": "En utilisant une formule collaborative de designers, chercheurs, photographes, vidéastes et rédacteurs, nous construirons et étendrons votre marque dans les lieux numériques.",
+    "learnMore": "Apprendre encore plus"
+  },
+  "graphicDesign": {
+    "title": "Conception graphique",
+    "description": "Un excellent design vous rend mémorable. Nous livrons des illustrations qui soulignent le message de votre marque et captent l'attention des clients potentiels."
+  },
+  "photography": {
+    "title": "La photographie",
+    "description": "Augmentez votre crédibilité en obtenant les photos les plus étonnantes et de haute qualité qui améliorent l'image de votre entreprise."
+  },
+  "testimonials": {
+    "title": "Témoignages clients"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "testimonials": [
+    {
+      "locale": "en",
+      "name": "Emily R.",
+      "imageUrl": "/images/image-emily.jpg",
+      "description": "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+      "role": "Marketing Director"
+    },
+    {
+      "locale": "en",
+      "name": "Thomas S.",
+      "imageUrl": "/images/image-thomas.jpg",
+      "description": "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+      "role": "Chief Operating Officer"
+    },
+    {
+      "locale": "en",
+      "name": "Jennie F.",
+      "imageUrl": "/images/image-jennie.jpg",
+      "description": "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+      "role": "Business Owner"
+    },
+    {
+      "locale": "pt",
+      "name": "Emily R.",
+      "imageUrl": "/images/image-emily.jpg",
+      "description": "Depositamos nossa confiança na Sunnyside e eles entregaram, garantindo que nossas necessidades fossem atendidas e os prazos fossem sempre cumpridos.",
+      "role": "Diretor de marketing"
+    },
+    {
+      "locale": "pt",
+      "name": "Thomas S.",
+      "imageUrl": "/images/image-thomas.jpg",
+      "description": "O entusiasmo de Sunnyside, juntamente com seu grande interesse no sucesso de nossa marca, tornou uma experiência satisfatória e agradável.",
+      "role": "Diretor de operações"
+    },
+    {
+      "locale": "pt",
+      "name": "Jennie F.",
+      "imageUrl": "/images/image-jennie.jpg",
+      "description": "Resultado final incrível! Nossas vendas aumentaram mais de 400% quando trabalhamos com a Sunnyside. Altamente recomendado!",
+      "role": "Dono do negócio"
+    },
+    
+    {
+      "locale": "es",
+      "name": "Emily R.",
+      "imageUrl": "/images/image-emily.jpg",
+      "description": "Depositamos nuestra confianza en Sunnyside e eles entregaram, garantindo que nossas necessidades fossem atendidas e os prazos fossem semper cumpridos.",
+      "role": "Director de marketing"
+    },
+    {
+      "locale": "es",
+      "name": "Thomas S.",
+      "imageUrl": "/images/image-thomas.jpg",
+      "description": "O entusiasmo de Sunnyside, juntamente con su gran interés sin éxito de nuestra marca, tornou uma experiência satisfatória e agradável.",
+      "role": "Director de operaciones"
+    },
+    {
+      "locale": "es",
+      "name": "Jennie F.",
+      "imageUrl": "/images/image-jennie.jpg",
+      "description": "¡Increíble resultado final! Nuestras ventas aumentaron más del 400 % cuando trabajamos con Sunnyside. ¡Muy recomendable!",
+      "role": "Propietario de la empresa"
+    },
+    
+    {
+      "locale": "fr",
+      "name": "Emily R.",
+      "imageUrl": "/images/image-emily.jpg",
+      "description": "Nous plaçons notre confiance en Sunnyside et ils livreront, garantissant que nos besoins sont satisfaits et que les délais sont toujours respectés.",
+      "role": "Directeur marketing"
+    },
+    {
+      "locale": "fr",
+      "name": "Thomas S.",
+      "imageUrl": "/images/image-thomas.jpg",
+      "description": "L'enthousiasme de Sunnyside, associé à leur intérêt infructueux pour notre marque, a permis une expérience satisfaisante et agréable.",
+      "role": "Directeur des opérations"
+    },
+    {
+      "locale": "fr",
+      "name": "Jennie F.",
+      "imageUrl": "/images/image-jennie.jpg",
+      "description": "Résultat final incroyable ! Nos ventes ont augmenté de plus de 400 % lorsque nous avons travaillé avec Sunnyside. Très recommandable!",
+      "role": "Propriétaire d'entreprise"
+    }
+    
+  ]
+}
