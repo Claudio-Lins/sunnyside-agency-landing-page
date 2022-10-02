@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/images/favicon-32x32.png" />
       </Head>
-      <div className="flex h-screen w-full flex-col items-center bg-image-header-mob bg-cover bg-top bg-no-repeat pt-64 md:bg-image-header-desk md:bg-center md:pt-32">
+      <div className="flex h-screen w-full flex-col items-center bg-image-header-mob bg-cover bg-top bg-no-repeat pt-20 md:bg-image-header-desk md:bg-center md:pt-32">
         <h1 className="mb-18 text-center font-Fraunces text-6xl font-bold tracking-widest text-white md:text-8xl">
           {t("title")}
         </h1>
