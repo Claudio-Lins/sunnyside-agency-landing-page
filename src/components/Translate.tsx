@@ -43,25 +43,25 @@ export function Translate() {
   return (
     <div className="fixed top-20 right-4 z-10 md:top-28 md:right-10">
       <button className=" group flex items-center justify-center">
-        <div className=" mt-1 flex max-w-0 items-center justify-center gap-2 overflow-hidden rounded-md transition-all duration-500 group-hover:max-w-sm ">
+        <div className="flex max-w-0 gap-x-2 overflow-hidden rounded-md transition-all duration-500 group-hover:max-w-sm ">
           {router.locales
             ?.filter((locale) => locale !== router.locale)
             .map((locale, index) => (
               <Link href={"/"} locale={locale} key={index}>
-                <a className="flex flex-col items-center justify-center font-bold text-black">
+                <a className="flex flex-col font-bold text-black">
                   <Image
                     src={flag(locale)}
                     alt={locale}
                     width={30}
                     height={30}
-                    className={`mt-2 grayscale hover:grayscale-0`}
+                    className={` grayscale hover:grayscale-0`}
                   />
                   <span className="text-xs">{locale}</span>
                 </a>
               </Link>
             ))}
         </div>
-        <div className="h-10 w-10 overflow-hidden">
+        <div className="h-12 w-12 overflow-hidden">
           <Image
             src={currentLanguage()}
             alt={router.locale}
